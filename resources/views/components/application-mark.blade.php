@@ -1,0 +1,1 @@
+<h1 class="text-5xl">Dev<span class=" font-bold">Photo</span></h1>
