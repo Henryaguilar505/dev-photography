@@ -1,9 +1,9 @@
 <x-app-layout>
     {{-- Crear seccion about me, incluye la foto de perfil y un prrafo descriptivo de la persona (fotografo) --}}
-    <section class="container  mx-auto px-6 py-20 mt-8 mb-8 pl-6">
+    <section class="container  mx-auto px-6  mt-8 mb-8 pl-6">
         <div class="flex flex-col md:flex-row md:gap-[4%] md:items-center sm:justify-center">
             {{-- Texto --}}
-            <div class="basis-1/2 flex flex-col justify-center space-y-4 mb-8">
+            <div class="basis-1/2 flex flex-col justify-center gap-4 mb-8">
                 <h2 class="font-header font-bold text-4xl text-left md:text-left">{{ $user->name }}</h2>
 
                 <p class="text-orange-500 font-bold text-left">Fotógrafo profesional</p>
