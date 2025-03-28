@@ -3,9 +3,9 @@
     <div class="absolute inset-0 bg-gray-800  bg-opacity-85"></div>
 
 
-    <div class="flex flex-col text-center z-10 my-4">
+    <div class="flex flex-col text-center z-10 mt-8 md:mt2 mb-24 md:mb-2">
         <h1 class="text-5xl text-white font-header font-bold">{{$user->name}}</h1>
-        <p class=" text-orange-500 font-mono mt-4 text-xl px-4">"Tomar fotos significa estar enamorado de la vida."</p>
+        <p class=" text-orange-500 font-mono mt-8 md:mt-2 text-xl px-4">"Tomar fotos significa estar enamorado de la vida."</p>
     </div>
 
 
