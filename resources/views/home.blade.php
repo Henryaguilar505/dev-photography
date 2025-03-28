@@ -16,9 +16,15 @@
             {{-- Imagen --}}
             <div class="flex justify-center items-center basis-1/3">
                 @if (!$user->profile_photo_path)
-                    <img class="object-cover max-h-96 w-auto" src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}" />
+                    <img class="object-cover max-h-96 w-auto" style="
+                    max-height: 27rem;
+                    width: auto;
+                " src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}" />
                 @else  
-                <img class="object-fill max-h-96 w-auto" src="{{ asset('storage/' . $user->profile_photo_path) }}" alt="{{ $user->name }}" />
+                <img class="object-fill max-h-96 w-auto" style="
+                max-height: 27rem;
+                width: auto;
+            " src="{{ asset('storage/' . $user->profile_photo_path) }}" alt="{{ $user->name }}" />
                 @endif
             </div>
             
