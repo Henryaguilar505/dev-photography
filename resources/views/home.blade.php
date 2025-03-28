@@ -15,8 +15,10 @@
             </div>
             {{-- Imagen --}}
             <div class="flex justify-center mt-4 basis-1/2">
-                <img class="object-cover" src="{{$user->profile_photo_url }}" alt="{{ $user->name }}" />
+                <img class="object-cover" src="{{ asset('storage/' . $user->profile_photo_path) }}" alt="{{ $user->name }}" />
             </div>
+            
+           
             
         </div>
        
