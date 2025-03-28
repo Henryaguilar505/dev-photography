@@ -25,6 +25,8 @@
             " src="{{ asset('storage/' . $user->profile_photo_path) }}" alt="{{ $user->name }}" />
                 @endif
             </div>
+
+            <p>Prueba</p>
             
            
             
