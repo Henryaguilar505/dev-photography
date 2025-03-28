@@ -1,11 +1,9 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-
+Route::get('/',[UserController::class, 'home'])->name('home');
 Route::get('/portfolio', function () {
     return view('portfolio');
 })->name('portfolio');

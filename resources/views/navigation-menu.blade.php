@@ -1,11 +1,11 @@
-<header class="relative bg-cover bg-center h-64 flex items-center justify-center"
+<header class="relative bg-cover bg-center min-h-64 flex items-center justify-center"
     style="background-image: url('https://media.ambito.com/p/108bbc3d3ec29e9359ec0bf92fa26da1/adjuntos/239/imagenes/040/085/0040085341/fotografiajpg.jpg');">
     <div class="absolute inset-0 bg-gray-800  bg-opacity-85"></div>
 
 
-    <div class="relative text-center text-white">
-        <x-application-mark />
-        <p class="text-orange-500 mt-4 text-xl px-4">Tomar fotos significa estar enamorado de la vida</p>
+    <div class="flex flex-col text-center z-10 my-4">
+        <h1 class="text-5xl text-white font-header font-bold">{{$user->name}}</h1>
+        <p class=" text-orange-500 font-mono mt-4 text-xl px-4">"Tomar fotos significa estar enamorado de la vida."</p>
     </div>
 
 
@@ -20,8 +20,8 @@
                 @guest
                     <x-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')" class="hover:text-orange-400">Iniciar
                         Sesión</x-nav-link>
-                    <x-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')"
-                        class="hover:text-orange-400">Registrarse</x-nav-link>
+                    {{-- <x-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')"
+                        class="hover:text-orange-400">Registrarse</x-nav-link> --}}
                 @endguest
 
                 @auth
@@ -42,7 +42,7 @@
                                     <span class="inline-flex rounded-md">
                                         <button type="button"
                                             class="inline-flex items-center border border-transparent text-sm leading-4 font-medium rounded-md text-gray-200 hover:text-orange-400 focus:outline-none transition ease-in-out duration-150">
-                                            {{ Auth::user()->name }}
+                                            {{ $user->name }}
 
                                             <svg class="ms-2 -me-0.5 size-4" xmlns="http://www.w3.org/2000/svg"
                                                 fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -114,14 +114,17 @@
                         <x-responsive-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">
                             Iniciar Sesión
                         </x-responsive-nav-link>
-                        <x-responsive-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')">
+                        {{-- <x-responsive-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')">
                             Registrarse
-                        </x-responsive-nav-link>
+                        </x-responsive-nav-link> --}}
                     @endguest
 
                     @auth
                         <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                             Dashboard
+                        </x-responsive-nav-link>
+                        <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                            {{ __('Perfil') }}
                         </x-responsive-nav-link>
                         <form method="POST" action="{{ route('logout') }}" x-data>
                             @csrf
@@ -138,7 +141,7 @@
     <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-4 sm:right-10 sm:left-auto sm:transform-none sm:flex-col sm:space-y-3 sm:space-x-0">
 
         <a href="#" class="text-white hover:text-orange-400 border-2 border-white rounded-lg p-2">
-            <svg class="w-6 h-6 text-gray-800 dark:text-white hover:fill-orange-500" aria-hidden="true"
+            <svg class=" w-4 h-4 sm:w-6 sm:h-6 text-gray-800 dark:text-white hover:fill-orange-500" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
                 <path fill-rule="evenodd"
                     d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
@@ -147,7 +150,7 @@
         </a>
 
         <a href="#" class="text-white hover:text-orange-400 border-2 border-white rounded-lg p-2">
-            <svg class="w-6 h-6 text-gray-800 dark:text-white  hover:fill-orange-500" aria-hidden="true"
+            <svg class="w-4 h-4 sm:w-6 sm:h-6 text-gray-800 dark:text-white  hover:fill-orange-500" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
                 <path fill-rule="evenodd"
                     d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
@@ -157,7 +160,7 @@
 
 
         <a href="#" class="text-white hover:text-orange-400 border-2 border-white rounded-lg p-2">
-            <svg class="w-6 h-6 text-gray-800 dark:text-white hover:fill-orange-500" aria-hidden="true"
+            <svg class="w-4 h-4 sm:w-6 sm:h-6 text-gray-800 dark:text-white hover:fill-orange-500" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
                 <path
                     d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />

@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -13,7 +14,10 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    //obtener el nombre de la aplicacion desde la base de datos, se debe llamar como el usuario con el id 1
+   
+    
+     'name' => env('APP_NAME', 'laravel'),
 
     /*
     |--------------------------------------------------------------------------

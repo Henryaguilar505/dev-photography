@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\User;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
@@ -12,6 +13,8 @@ class AppLayout extends Component
      */
     public function render(): View
     {
-        return view('layouts.app');
+         //obtener informacion del unico usario y administrador de la aplicacion
+         $user = User::where('id', 1)->first();
+        return view('layouts.app', ['user'=> $user]);
     }
 }
