@@ -39,7 +39,7 @@
 
     <!-- Gallery Section -->
     <section class="container mx-auto max-w-[1300px] p-8">
-        <div class="container mx-auto p-6">
+       
             <h2 class="font-header font-bold text-4xl text-left md:text-left mb-8">Fotografías recientes</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div class="relative overflow-hidden rounded-lg shadow-lg group">
@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
     </section>
 
 
