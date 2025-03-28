@@ -15,7 +15,7 @@
             </div>
             {{-- Imagen --}}
             <div class="flex justify-center mt-4 basis-1/2">
-                <img class="object-cover" src="{{ asset('storage/' . $user->profile_photo_path) }}" alt="{{ $user->name }}" />
+                <img class="object-cover max-h-96" src="{{ asset('storage/' . $user->profile_photo_path) }}" alt="{{ $user->name }}" />
             </div>
             
            
