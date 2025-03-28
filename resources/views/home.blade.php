@@ -15,7 +15,11 @@
             </div>
             {{-- Imagen --}}
             <div class="flex justify-center mt-4 basis-1/2">
+                @if (!$user->profile_photo_path)
+                    <img class="object-cover max-h-96" src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}" />
+                @else  
                 <img class="object-cover max-h-96" src="{{ asset('storage/' . $user->profile_photo_path) }}" alt="{{ $user->name }}" />
+                @endif
             </div>
             
            
