@@ -8,9 +8,7 @@
 
                 <p class="text-orange-500 font-bold text-left">Fotógrafo profesional</p>
 
-                <p class="text-justify md:text-left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit unde iusto vitae numquam 
-                    nam facere quidem ut laborum distinctio, quisquam consequatur aliquam cumque nemo. In saepe maiores 
-                    aspernatur laboriosam voluptatem!</p>
+                <p class="text-justify md:text-left">Soy un fotógrafo apasionado por capturar la belleza de los paisajes que nos rodean. A través de mi lente, busco inmortalizar momentos únicos en la naturaleza, desde majestuosas montañas hasta tranquilas playas al atardecer. Mi objetivo es transmitir emociones y contar historias a través de cada fotografía, permitiendo que quienes las observen puedan conectarse con la esencia de cada lugar.</p>
               
             </div>
             {{-- Imagen --}}
